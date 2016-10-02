@@ -13,6 +13,7 @@
 		16E791CA1D7D6C93004BA13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E791C81D7D6C93004BA13A /* Main.storyboard */; };
 		16E791CC1D7D6C93004BA13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16E791CB1D7D6C93004BA13A /* Assets.xcassets */; };
 		16E791CF1D7D6C93004BA13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E791CD1D7D6C93004BA13A /* LaunchScreen.storyboard */; };
+		16E791D71D7D6EA1004BA13A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E791D61D7D6EA1004BA13A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		16E791CB1D7D6C93004BA13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16E791CE1D7D6C93004BA13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16E791D01D7D6C93004BA13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16E791D61D7D6EA1004BA13A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E791D71D7D6EA1004BA13A /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 		16E791B31D7D6C93004BA13A = {
 			isa = PBXGroup;
 			children = (
+				16E791D61D7D6EA1004BA13A /* CoreLocation.framework */,
 				16E791BE1D7D6C93004BA13A /* location */,
 				16E791BD1D7D6C93004BA13A /* Products */,
 			);
@@ -110,6 +114,7 @@
 				TargetAttributes = {
 					16E791BB1D7D6C93004BA13A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5KX3Y2CU6T;
 					};
 				};
 			};
@@ -265,10 +270,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = location/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = goit.anton.gutkin.location;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -276,10 +284,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = location/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = goit.anton.gutkin.location;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -302,6 +313,7 @@
 				16E791D51D7D6C93004BA13A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
